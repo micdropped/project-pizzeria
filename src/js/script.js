@@ -107,6 +107,7 @@
       const thisProduct = this;
 
       /* generate HTML based on template */
+      console.log(thisProduct.data);
       const generatedHTML = templates.menuProduct(thisProduct.data);
       /* create element using utils.createElementFromHTML */
       thisProduct.element = utils.createDOMFromHTML(generatedHTML);
@@ -244,7 +245,7 @@
 
       thisProduct.amountWidget = new AmountWidget(thisProduct.amountWidgetElem);
 
-      thisProduct.amountWidgetElem.addEventListener('updated', function (event) {
+      thisProduct.amountWidgetElem.addEventListener('updated', function () {
         thisProduct.processOrder();
       });
 
@@ -279,7 +280,7 @@
     setValue(value) {
       const thisWidget = this;
       thisWidget.value = settings.amountWidget.defaultValue;
-
+      console.log(thisWidget);
       let newValue = parseInt(value);
 
       /*  TODO: Add validation */
