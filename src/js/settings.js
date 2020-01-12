@@ -1,13 +1,24 @@
-/* global Handlebars */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
 
 export const select = {
   templateOf: {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product',
+    bookingWidget: '#template-booking-widget',
+    mainPage: '#template-main-page',
+    image: '#template-image-element',
+    opinions: '#template-opinion-element',
+    options: '#template-opinion-option',
   },
   containerOf: {
     menu: '#product-list',
     cart: '#cart',
+    pages: '#pages',
+    booking: '.booking-wrapper',
+    mainPage: '.main-wrapper',
+    image: '.gallery-wrapper',
+    opinions: '.carusel-slaider',
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -28,6 +39,15 @@ export const select = {
       linkDecrease: 'a[href="#less"]',
       linkIncrease: 'a[href="#more"]',
     },
+    datePicker: {
+      wrapper: '.date-picker',
+      input: `input[name="date"]`,
+    },
+    hourPicker: {
+      wrapper: '.hour-picker',
+      input: 'input[type="range"]',
+      output: '.output',
+    },
   },
   cart: {
     productList: '.cart__order-summary',
@@ -47,6 +67,25 @@ export const select = {
     edit: '[href="#edit"]',
     remove: '[href="#remove"]',
   },
+  booking: {
+    peopleAmount: '.people-amount',
+    hoursAmount: '.hours-amount',
+    tables: '.floor-plan .table',
+    formSubmit: '.order-confirmation [type="submit"]',
+    phone: '.order-confirmation [type="tel"]',
+    email: '.order-confirmation [type="email"]',
+    starters: '.checkbox [type="checkbox"]',
+  },
+  nav: {
+    links: '.main-nav a',
+  },
+  main: {
+    links: '.link a',
+    circles: '.carusel-option li',
+    opinions: '.opinion',
+    activeOpinion: '.opinion.active',
+    activeCircle: '.carusel-option .active',
+  },
 };
 
 export const classNames = {
@@ -57,25 +96,64 @@ export const classNames = {
   cart: {
     wrapperActive: 'active',
   },
+  booking: {
+    loading: 'loading',
+    tableBooked: 'booked',
+  },
+  nav: {
+    active: 'active',
+  },
+  pages: {
+    active: 'active',
+  },
+  main: {
+    carusel: 'active',
+  }
 };
 
 export const settings = {
+  hours: {
+    open: 12,
+    close: 24,
+  },
   amountWidget: {
     defaultValue: 1,
     defaultMin: 1,
     defaultMax: 9,
   },
+  datePicker: {
+    maxDaysInFuture: 14,
+  },
   cart: {
     defaultDeliveryFee: 20,
   },
+  booking: {
+    tableIdAttribute: 'data-table',
+  },
   db: {
-    url: '//localhost:3131',
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     product: 'product',
     order: 'order',
+    booking: 'booking',
+    event: 'event',
+    gallery: 'gallery',
+    opinions: 'opinions',
+    dateStartParamKey: 'date_gte',
+    dateEndParamKey: 'date_lte',
+    notRepeatParam: 'repeat=false',
+    repeatParam: 'repeat_ne=false',
   },
+  main: {
+    dataOpinion: 'data-opinion',
+  }
 };
 
 export const templates = {
   menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
+  bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+  mainPage: Handlebars.compile(document.querySelector(select.templateOf.mainPage).innerHTML),
+  image: Handlebars.compile(document.querySelector(select.templateOf.image).innerHTML),
+  opinions: Handlebars.compile(document.querySelector(select.templateOf.opinions).innerHTML),
+  options: Handlebars.compile(document.querySelector(select.templateOf.options).innerHTML),
 };
