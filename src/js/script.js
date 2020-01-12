@@ -318,6 +318,7 @@
 
   class Cart {
     constructor(element) {
+      // debugger;
       const thisCart = this;
 
       thisCart.deliveryFee = settings.cart.defaultDeliveryFee;
@@ -328,6 +329,8 @@
       thisCart.initActions();
 
       // console.log('new Cart', thisCart);
+
+
     }
 
     getElements(element) {
@@ -361,11 +364,11 @@
         thisCart.update();
       });
 
-      thisCart.dom.productList.addEventListener('remove', function () {
+      thisCart.dom.productList.addEventListener('remove', function (event) {
         thisCart.remove(event.detail.cartProduct);
       });
 
-      thisCart.dom.form.addEventListener('submit', function () {
+      thisCart.dom.form.addEventListener('submit', function (event) {
         event.preventDefault();
         thisCart.sendOrder();
         console.log('submit');
@@ -437,9 +440,14 @@
         },
         body: JSON.stringify(payload),
       };
-      console.log('adding product', thisCart);
-    }
 
+      fetch(url, options)
+        .then(function (response) {
+          return response.json();
+        }).then(function (parsedResponse) {
+          console.log('parsedResponse', parsedResponse);
+        });
+    }
   }
 
   class CartProduct {
@@ -455,6 +463,8 @@
 
       thisCartProduct.getElements(element);
       thisCartProduct.initAmountWidget();
+      thisCartProduct.initActions();
+      thisCartProduct.getData();
 
 
       // console.log('new CartPrduct', thisCartProduct);
@@ -489,7 +499,7 @@
       const thisCartProduct = this;
       const event = new CustomEvent('remove', {
         bubbles: true,
-        teail: {
+        detail: {
           cartProduct: thisCartProduct,
         },
       });
@@ -509,6 +519,20 @@
       //   event.preventDefault();
 
       // });
+    }
+
+    getData() {
+      const thisCartProduct = this;
+      const payloadData = {};
+
+      payloadData.id = thisCartProduct.name,
+        payloadData.price = thisCartProduct.price,
+        payloadData.pricesingle = thisCartProduct.priceSingle,
+        payloadData.amount = thisCartProduct.amount,
+        payloadData.params = thisCartProduct.params;
+
+      console.log(payloadData);
+      return payloadData;
     }
   }
 
