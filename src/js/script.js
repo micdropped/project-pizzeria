@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* global Handlebars, utils, dataSource */ // eslint-disable-line no-unused-vars
 
 {
@@ -526,9 +527,13 @@
       const payloadData = {};
 
       payloadData.id = thisCartProduct.name,
+        // eslint-disable-next-line indent
         payloadData.price = thisCartProduct.price,
+        // eslint-disable-next-line indent
         payloadData.pricesingle = thisCartProduct.priceSingle,
+        // eslint-disable-next-line indent
         payloadData.amount = thisCartProduct.amount,
+        // eslint-disable-next-line indent
         payloadData.params = thisCartProduct.params;
 
       console.log(payloadData);
