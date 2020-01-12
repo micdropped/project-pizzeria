@@ -3,6 +3,10 @@
 $color-dark: #333;
 $color-light: #fff;
 $color-main: #ff6b6b;
+$color-warning: #f6b93b;
+$color-danger: #e55039;
+$color-success: #78e08f;
+$color-slaider: #7f8c8d;
 
 $font-header: 'Oswald', sans-serif;
 $font-text: 'Lato', sans-serif;
@@ -72,6 +76,25 @@ $base-size: 12px;
   transform: translate(0, 0);
   max-height: 1000px;
   opacity: 1;
+}
+
+@mixin after_box() {
+  @include center();
+  color: $color-light;
+}
+
+@mixin after_box_hover_a() {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -65%);
+}
+
+@mixin after_box_hover_p() {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -45%);
 }
 
 /* Helpers */
