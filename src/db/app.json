@@ -52,14 +52,14 @@
       "description": "The true taste of Italy &ndash; homemade pizza as prepared by our grandmothers in old-fashoned brick ovens. Choose your favorite topping and enjoy your comfort food! All ingredients come straight from eco-friendly, trusted farms in the Italian countryside.",
       "images": [
         "<img class=\"active\" src=\"images/pizza/crust.svg\">",
-        "<img class=\"active sauce-tomato\" src=\"images/pizza/tomato-sauce.svg\">",
-        "<img class=\"active sauce-cream\" src=\"images/pizza/sour-cream.svg\">",
-        "<img class=\"active toppings-salami\" src=\"images/pizza/salami.svg\">",
-        "<img class=\"active toppings-olives\" src=\"images/pizza/olives.svg\">",
-        "<img class=\"active toppings-redPeppers\" src=\"images/pizza/red-peppers.svg\">",
-        "<img class=\"active toppings-greenPeppers\" src=\"images/pizza/green-peppers.svg\">",
-        "<img class=\"active toppings-mushrooms\" src=\"images/pizza/mushrooms.svg\">",
-        "<img class=\"active toppings-basil\" src=\"images/pizza/basil.svg\">"
+        "<img class=\"sauce-tomato\" src=\"images/pizza/tomato-sauce.svg\">",
+        "<img class=\"sauce-cream\" src=\"images/pizza/sour-cream.svg\">",
+        "<img class=\"toppings-salami\" src=\"images/pizza/salami.svg\">",
+        "<img class=\"toppings-olives\" src=\"images/pizza/olives.svg\">",
+        "<img class=\"toppings-redPeppers\" src=\"images/pizza/red-peppers.svg\">",
+        "<img class=\"toppings-greenPeppers\" src=\"images/pizza/green-peppers.svg\">",
+        "<img class=\"toppings-mushrooms\" src=\"images/pizza/mushrooms.svg\">",
+        "<img class=\"toppings-basil\" src=\"images/pizza/basil.svg\">"
       ],
       "params": {
         "sauce": {
@@ -152,13 +152,13 @@
       "description": "A delicious salad made of fresh, home-grown products on a crispy lettuce base.",
       "images": [
         "<img class=\"active\" src=\"images/salad/plate.svg\">",
-        "<img class=\"active ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\">",
-        "<img class=\"active ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\">",
-        "<img class=\"active ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\">",
-        "<img class=\"active ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\">",
-        "<img class=\"active ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\">",
-        "<img class=\"active ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\">",
-        "<img class=\"active ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\">"
+        "<img class=\"ingredients-cucumber\" src=\"images/salad/cucumber.svg\" style=\"z-index: 1;\">",
+        "<img class=\"ingredients-tomatoes\" src=\"images/salad/tomatoes.svg\" style=\"z-index: 2;\">",
+        "<img class=\"ingredients-olives\" src=\"images/salad/salad-olives.svg\" style=\"z-index: 3;\">",
+        "<img class=\"ingredients-feta\" src=\"images/salad/feta.svg\" style=\"z-index: 4;\">",
+        "<img class=\"ingredients-herbs\" src=\"images/salad/herbs.svg\" style=\"z-index: 5;\">",
+        "<img class=\"ingredients-cheese\" src=\"images/salad/cheese.svg\" style=\"z-index: 6;\">",
+        "<img class=\"ingredients-pepper\" src=\"images/salad/black-pepper.svg\" style=\"z-index: 7;\">"
       ],
       "params": {
         "ingredients": {
@@ -202,5 +202,183 @@
       }
     }
   ],
-  "order": []
+  "order": [],
+  "event": [
+    {
+      "id": 1,
+      "date": "2019-11-22",
+      "hour": "12:30",
+      "table": [
+        1
+      ],
+      "repeat": false,
+      "duration": 4,
+      "ppl": 3,
+      "starters": []
+    },
+    {
+      "id": 2,
+      "date": "2019-11-23",
+      "hour": "16:00",
+      "table": [
+        3
+      ],
+      "repeat": "daily",
+      "duration": 5,
+      "ppl": 3,
+      "starters": [
+        "bread",
+        "lemonWater"
+      ]
+    },
+    {
+      "id": 3,
+      "date": "2019-11-24",
+      "hour": "12:00",
+      "table": [
+        3
+      ],
+      "repeat": "daily",
+      "duration": 2,
+      "ppl": 3,
+      "starters": [
+        "bread",
+        "lemonWater"
+      ]
+    },
+    {
+      "id": 4,
+      "date": "2019-11-26",
+      "hour": "13:00",
+      "table": [
+        2
+      ],
+      "repeat": "daily",
+      "duration": 4,
+      "ppl": 3,
+      "starters": []
+    },
+    {
+      "id": 5,
+      "date": "2019-11-26",
+      "hour": "18:00",
+      "table": [
+        2
+      ],
+      "repeat": "daily",
+      "duration": 2,
+      "ppl": 3,
+      "starters": [
+        "lemonWater"
+      ]
+    }
+  ],
+  "booking": [
+    {
+      "id": 1,
+      "date": "2019-11-22",
+      "hour": "17:00",
+      "table": [
+        1
+      ],
+      "duration": 3,
+      "ppl": 4,
+      "starters": [
+        "water"
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "id": 1,
+      "image": {
+        "title": "image_1",
+        "alt": "image_1",
+        "source": "./images/main/pizza-4.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "image": {
+        "title": "image_2",
+        "alt": "image_2",
+        "source": "./images/main/pizza-5.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "image": {
+        "title": "image_3",
+        "alt": "image_3",
+        "source": "./images/main/pizza-6.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "image": {
+        "title": "image_4",
+        "alt": "image_4",
+        "source": "./images/main/pizza-7.jpg"
+      }
+    },
+    {
+      "id": 5,
+      "image": {
+        "title": "image_5",
+        "alt": "image_5",
+        "source": "./images/main/pizza-8.jpg"
+      }
+    },
+    {
+      "id": 6,
+      "image": {
+        "title": "image_6",
+        "alt": "image_6",
+        "source": "./images/main/pizza-9.jpg"
+      }
+    }
+  ],
+  "opinions": [
+    {
+      "id": 1,
+      "opinion": {
+        "title": "Amazing",
+        "text": "Tasty pizza, professional service. I recommend 100%.",
+        "author": "~David Copperfild",
+        "class": "opinionOne",
+        "active": "active"
+      },
+      "options": {
+        "data-opinion": "opinionOne",
+        "data-slajder": "1",
+        "class": "active"
+      }
+    },
+    {
+      "id": 2,
+      "opinion": {
+        "title": "Wonderfull",
+        "text": "Great starters, tasty main dishes. In addition, very large portions.",
+        "author": "~Margaret Tacher",
+        "class": "opinionTwo"
+      },
+      "options": {
+        "data-opinion": "opinionTwo",
+        "data-slajder": "2"
+      }
+    },
+    {
+      "id": 3,
+      "opinion": {
+        "title": "Professional",
+        "text": "nothing more nothing less. cool!",
+        "author": "~Fredy Mercury",
+        "class": "opinionThree"
+      },
+      "options": {
+        "data-opinion": "opinionThree",
+        "data-slajder": "3"
+      }
+    }
+  ]
 }
