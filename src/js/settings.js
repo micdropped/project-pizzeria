@@ -75,6 +75,7 @@ export const select = {
     phone: '.order-confirmation [type="tel"]',
     email: '.order-confirmation [type="email"]',
     starters: '.checkbox [type="checkbox"]',
+    modalMsg: '.modal',
   },
   nav: {
     links: '.main-nav a',
@@ -131,7 +132,7 @@ export const settings = {
     tableIdAttribute: 'data-table',
   },
   db: {
-    url: '//localhost:3131',
+    url: '//' + window.location.hostname + (window.location.hostname == 'localhost' ? ':3131' : ''),
     product: 'product',
     order: 'order',
     booking: 'booking',

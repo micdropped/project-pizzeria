@@ -5,6 +5,7 @@ import { settings, select, classNames, templates } from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
+import MainPage from './components/MainPage.js';
 
 const app = {
   initPages: function () {
@@ -106,6 +107,28 @@ const app = {
     thisApp.booking = new Booking(bookingElem);
   },
 
+  initMain: function () {
+    const thisApp = this;
+
+    const mainPageElem = document.querySelector(select.containerOf.mainPage);
+    thisApp.main = new MainPage(mainPageElem);
+
+    thisApp.mainLinks = document.querySelectorAll(select.main.links);
+
+    for (let link of thisApp.mainLinks) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const clickedElement = this;
+
+        const id = clickedElement.getAttribute('href').replace('#', '');
+
+        thisApp.activatePage(id);
+
+        window.location.hash = '#/' + id;
+      });
+    }
+  },
+
   init: function () {
     const thisApp = this;
     console.log('*** App starting ***');
@@ -118,6 +141,7 @@ const app = {
     thisApp.initData();
     thisApp.initCart();
     thisApp.initBooking();
+    thisApp.initMain();
   },
 };
 

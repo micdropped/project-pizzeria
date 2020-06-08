@@ -60,7 +60,6 @@ class Cart {
         thisCart.dom.form.addEventListener('submit', function (event) {
             event.preventDefault();
             thisCart.sendOrder();
-            console.log('submit');
         });
     }
 
